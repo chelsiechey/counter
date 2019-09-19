@@ -1,36 +1,16 @@
 import React, { Component } from 'react';
+import Counter from './components/counter/Counter'
 
 class App extends Component {
-  // constructor(props) {
-  //   super(props)
-  //   this.state = { value: 0 }
-  //   this.inc = this.inc.bind(this)
-  //   this.dec = this.dec.bind(this)
-  // }
-  state = { value: 0 }
-
-  inc = () => {
-    // asynchronous 
-    // this.setState({ value: this.state.value + 1 })
-    this.setState( (state) => {
-      return { value: state.value + 1}
-    })
-  }
-
-  dec = () => {
-    // this.setState({ value: this.state.value - 1})
-    this.setState( (state) => {
-      return { value: state.value - 1}
-    })
-  }
 
   render() {
     return (
       <div>
         <h1 className='colored'>Counter Example</h1>
-        <p>{ this.state.value }</p>
-        <button onClick={this.inc}>+</button>
-        <button onClick={this.dec}>-</button>
+        <Counter name='red' />
+        <Counter name='green' />
+        <Counter name='purple' />
+        <Counter name='blue' />
       </div>
     )
   }
